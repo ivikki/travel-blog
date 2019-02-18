@@ -1,6 +1,8 @@
 body{
     margin: 0;
     padding: 0;
+    font: 16px/1.2 Arial, sans-serif;
+    color: #6E6E6E;
 }
 
 body *, body *:before, body *:after{
@@ -21,4 +23,169 @@ ol, ul{
 
 a{
     text-decoration: none;
+}
+
+h1, h2, h3, h4, h5{
+    font-weight: normal;
+}
+
+.container{
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+/*header*/
+
+header{
+    width: 100%;
+    position: fixed;
+    background: #f2f2f2;
+    padding: 15px 0;
+    z-index: 10;
+    font-size: 13px;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 7px;
+}
+
+nav a{
+    color: #6E6E6E;
+    font-weight: 400;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+nav .active{
+    color: #3AC0C7;
+}
+
+nav a:hover{
+    color: #3AC0C7;
+    transition: opacity 0.3s ease;
+}
+
+.social-menu a:hover{
+    opacity: 0.5;
+}
+
+/*banner*/
+
+.banner{
+    padding-top: 58px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    background: url("../img/bg-banner.jpg") no-repeat 50% 50%;
+    height: 475px;
+}
+
+.banner .container{
+    top: 20%;
+    position: relative;
+    z-index: 0;
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.banner h2{
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+
+/*about-block*/
+
+.about{
+    margin: 50px auto;
+    text-align: center;
+}
+
+.about blockquote{
+    margin-bottom: 35px;
+}
+
+.about-block-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-block{
+    width: 32%;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-block-white{
+    background-color: white;
+    width: 50%;
+    padding: 15px 0;
+}
+
+.about-block-white a{
+    font-size: 24px;
+    color: #3AC0C7;
+    transition: color 0.3s ease;
+}
+
+.about-block-white a:hover{
+    color: #278085;
+}
+
+.about-block1{
+   background: url("../img/about-block1.jpg") no-repeat;
+}
+
+.about-block2{
+    background: url("../img/about-block2.jpg") no-repeat;
+}
+
+.about-block3{
+    background: url("../img/about-block3.jpg") no-repeat;
+}
+
+/*quote*/
+
+.quote{
+    background: #f2f2f2;
+    width: 100%;
+}
+
+.quote .container{
+    padding: 20px 30px 30px 30px;
+}
+
+.quote li{
+    display: inline-block;
+    color: black;
+    font-size: 24px;
+    margin-left: 55px;
+    vertical-align: top;
+}
+
+.quote li:first-child{
+    border-right: 2px solid #6E6E6E;
+    margin-left: 0;
+    padding: 7px 30px 7px 0;
+    margin-top: 8px;
+}
+
+.quote a{
+    display: block;
+}
+
+.quote img{
+    transition: opacity 0.3s ease;
+}
+
+.quote img:hover{
+    opacity: 0.3;
 }

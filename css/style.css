@@ -189,3 +189,71 @@ nav a:hover{
 .quote img:hover{
     opacity: 0.3;
 }
+
+/*post*/
+
+.post{
+    margin-top: 40px;
+}
+
+.post-text{
+    border: 1px solid #f2f2f2;
+    border-top: none;
+    padding: 40px 50px;
+}
+
+.post-avatar{
+    padding-left: 45px;
+    position: relative;
+}
+
+.post-avatar:before{
+    content: '';
+    position: absolute;
+    background: url("../img/avatarka.jpg");
+    height: 32px;
+    width: 32px;
+    top: -2px;
+    left: 0;
+}
+
+.post-avatar a{
+    display: block;
+    font-size: 12px;
+    color: black;
+}
+
+.post-avatar a:hover{
+    color: #3AC0C7;
+    transition: color 0.1s ease;
+}
+
+.post-text h3{
+    font-size: 28px;
+    margin: 8px 0;
+}
+
+.post-text h3 a{
+    color: #3AC0C7;
+    transition: color 0.3s ease;
+}
+
+.post-text h3 a:hover{
+    color: black;
+}
+
+.post-text p{
+    border-bottom: 2px solid #f2f2f2;
+    line-height: 1.4;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.post-text span{
+    font-size: 12px;
+    margin-right: 15px;
+}
+
+.post-text span a, .post-text p a{
+    color: #6E6E6E;
+}

@@ -203,18 +203,12 @@ nav a:hover{
 }
 
 .post-avatar{
-    padding-left: 45px;
-    position: relative;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.post-avatar:before{
-    content: '';
-    position: absolute;
-    background: url("../img/avatarka.jpg");
-    height: 32px;
-    width: 32px;
-    top: -2px;
-    left: 0;
+.avatar{
+    margin-right: 10px;
 }
 
 .post-avatar a{

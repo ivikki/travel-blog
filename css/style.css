@@ -251,3 +251,140 @@ nav a:hover{
 .post-text span a, .post-text p a{
     color: #6E6E6E;
 }
+
+/*footer*/
+
+footer{
+    width: 100%;
+    background-color: #6e6e6e;
+    color: white;
+}
+
+.footer-social-wrapper{
+    background-color: #3ac0c7;
+    padding: 20px 0;
+}
+
+.footer-social-menu ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 40px;
+}
+
+.footer-social-menu a{
+    font-size: 15px;
+    color: white;
+    transition: opacity 0.3s ease;
+    padding-left: 35px;
+}
+
+.footer-social-menu a:hover{
+    opacity: 0.7;
+}
+
+.vk a{
+    background: url("../img/vk-white.png") no-repeat 0 -4px;
+}
+
+.facebook a{
+    background: url("../img/facebook-white.png") no-repeat 0 -4px;
+}
+
+.pinterest a{
+    background: url("../img/pinterest-white.png") no-repeat 0 -4px;
+}
+
+.instagram a{
+    background: url("../img/instagram-white.png") no-repeat 0 -4px;
+}
+
+.twitter a{
+    background: url("../img/twitter-white.png") no-repeat 0 -4px;
+}
+
+.footer-bottom{
+    padding: 60px 15px 40px 15px;
+}
+
+.footer-bottom-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom-left{
+    width: 57%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.photo{
+    width: 70%;
+    margin-right: 30px;
+}
+
+.footer-bottom h2{
+    font-size: 24px;
+}
+
+.text-about p{
+    font-size: 15px;
+    margin: 14px 0;
+    line-height: 1.4;
+}
+
+.text-about a{
+    color: #3AC0C7;
+    border-bottom: 1px solid #3AC0C7;
+    font-size: 15px;
+}
+
+.text-about a:hover{
+    border: none;
+}
+
+.footer-bottom-right{
+    width: 36%;
+}
+
+.footer-bottom-right h2{
+    font-weight: bold;
+}
+
+.footer-bottom-right input[type=email]{
+    display: block;
+    padding: 10px 8px;
+    width: 100%;
+    font-size: 14px;
+    margin: 18px 0 8px 0;
+}
+
+.footer-bottom-right input[type=email]:focus{
+    outline: none;
+}
+
+.footer-bottom-right button{
+    width: 100%;
+    border: none;
+    background-color: #3AC0C7;
+    font-size: 14px;
+    color: white;
+    padding: 10px 0;
+}
+
+.footer-bottom-bottom .footer-social-menu{
+    margin-top: 50px;
+}
+
+.footer-bottom-bottom .footer-social-menu ul{
+    margin: 0;
+    justify-content: flex-start;
+}
+
+.footer-bottom-bottom .footer-social-menu a{
+    margin-right: 5px;
+}
+
+.footer-bottom-bottom .copyright{
+    font-size: 13px;
+    margin-top: 25px;
+}

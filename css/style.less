@@ -1,4 +1,6 @@
 @grey: #6E6E6E;
+@white: #fff;
+@blue: #3AC0C7;
 
 body{
   margin: 0;
@@ -66,7 +68,7 @@ header{
 
   li{
     width: 100%;
-    background: white;
+    background: @white;
     border: 1px solid #f2f2f2;
   }
 
@@ -76,8 +78,8 @@ header{
   }
 
   .active{
-    color: white;
-    background: #3AC0C7;
+    color: @white;
+    background: @blue;
   }
 }
 
@@ -95,11 +97,11 @@ nav a{
 }
 
 nav .active{
-  color: #3AC0C7;
+  color: @blue;
 }
 
 nav a:hover{
-  color: #3AC0C7;
+  color: @blue;
   transition: opacity 0.3s ease;
 }
 
@@ -141,7 +143,7 @@ nav a:hover{
     }
 
     .active{
-      color: #3AC0C7;
+      color: @blue;
       background: none;
     }
   }
@@ -204,7 +206,7 @@ nav a:hover{
 /*banner*/
 
 .banner{
-  color: white;
+  color: @white;
   text-align: center;
   width: 100%;
   background: url("../img/bg-banner.jpg") no-repeat 50% 50%;
@@ -269,14 +271,14 @@ nav a:hover{
 }
 
 .about-block-white{
-  background-color: white;
+  background-color: @white;
   width: 50%;
   padding: 15px 0;
 }
 
 .about-block-white a{
   font-size: 24px;
-  color: #3AC0C7;
+  color: @blue;
   transition: color 0.3s ease;
 }
 
@@ -324,17 +326,22 @@ nav a:hover{
 }
 
 .quote .container{
-  padding: 20px 30px 30px 30px;
+  padding: 20px 10px 30px 10px;
 }
 
 .quote-box{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  img{
+    width: auto;
+    margin: 0 auto;
+  }
 }
 
 .quote-box li{
-  width: 35%;
+  width: 40%;
   color: black;
   font-size: 24px;
   vertical-align: top;
@@ -368,8 +375,8 @@ nav a:hover{
 }
 
 @media all and (min-width: 600px) {
-  .quote-box{
-    flex-wrap: nowrap;
+  .quote .container{
+    padding: 20px 30px 30px 30px;
   }
   .quote-box li{
     width: auto;
@@ -417,7 +424,7 @@ nav a:hover{
 }
 
 .post-avatar a:hover{
-  color: #3AC0C7;
+  color: @blue;
   transition: color 0.1s ease;
 }
 
@@ -427,7 +434,7 @@ nav a:hover{
 }
 
 .post-text h3 a{
-  color: #3AC0C7;
+  color: @blue;
   transition: color 0.3s ease;
 }
 
@@ -473,12 +480,12 @@ nav a:hover{
 footer{
   width: 100%;
   background-color: @grey;
-  color: white;
+  color: @white;
   margin-top: 50px;
 }
 
 .footer-social-wrapper{
-  background-color: #3ac0c7;
+  background-color: @blue;
   padding: 20px 0;
 }
 
@@ -506,11 +513,11 @@ footer{
 
 .footer-social-menu a{
   font-size: 15px;
-  color: white;
+  color: @white;
   transition: opacity 0.3s ease;
   padding-left: 35px;
 
-  a:hover{
+  &:hover{
     opacity: 0.7;
   }
 }
@@ -569,8 +576,8 @@ footer{
 }
 
 .text-about a{
-  color: #3AC0C7;
-  border-bottom: 1px solid #3AC0C7;
+  color: @blue;
+  border-bottom: 1px solid @blue;
   font-size: 15px;
 
   &:hover{
@@ -602,9 +609,9 @@ footer{
   button{
     width: 100%;
     border: none;
-    background-color: #3AC0C7;
+    background-color: @blue;
     font-size: 14px;
-    color: white;
+    color: @white;
     padding: 10px 0;
     font-weight: bold;
   }
@@ -622,7 +629,6 @@ footer{
     margin-right: 5px;
   }
 }
-
 
 .footer-bottom-bottom .copyright{
   font-size: 13px;

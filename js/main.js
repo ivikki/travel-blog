@@ -11,3 +11,7 @@ window.addEventListener('resize', function(){
         headerActivClass.classList.remove('header-mobile');
     }
 });
+
+document.getElementById('js-top-page').addEventListener('click', function(){
+    window.scrollTo(0,0);
+});

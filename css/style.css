@@ -56,7 +56,7 @@ header .container{
     position: absolute;
     z-index: 5;
     top: 35px;
-    width: 80%;
+    width: 85%;
     opacity: 0.95;
     right: -200%;
     transition: right .7s ease;
@@ -107,7 +107,7 @@ nav a:hover{
     right: 10%;
 }
 
-@media all and (min-width: 540px) {
+@media all and (min-width: 600px) {
     header{
         position: fixed;
     }
@@ -222,7 +222,7 @@ nav a:hover{
     padding: 0 15%;
 }
 
-@media all and (min-width: 540px) {
+@media all and (min-width: 600px) {
     .banner{
         height: 475px;
         padding-top: 58px;
@@ -236,12 +236,12 @@ nav a:hover{
 /*about-block*/
 
 .about{
-    margin: 50px auto;
+    margin: 20px auto;
     text-align: center;
 }
 
 .about blockquote{
-    margin: 0 7% 35px 7%;
+    margin: 0 7%;
 }
 
 .about-block-wrapper{
@@ -287,9 +287,15 @@ nav a:hover{
     background: url("../img/about-block3.jpg") no-repeat;
 }
 
-@media all and (min-width: 540px) {
+@media all and (min-width: 600px) {
+    .about{
+        margin: 50px auto;
+    }
     .about-block{
         width: 32%;
+    }
+    .about blockquote{
+        margin: 0 7% 35px 7%;
     }
 }
 
@@ -344,7 +350,7 @@ nav a:hover{
     opacity: 0.3;
 }
 
-@media all and (min-width: 540px) {
+@media all and (min-width: 600px) {
     .quote-box{
         flex-wrap: nowrap;
     }
@@ -428,7 +434,7 @@ nav a:hover{
     color: #6E6E6E;
 }
 
-@media all and (min-width: 540px) {
+@media all and (min-width: 600px) {
     .post{
         margin: 40px 0 0 0;
         border: none;
@@ -461,8 +467,23 @@ footer{
 
 .footer-social-menu ul{
     display: flex;
-    justify-content: space-between;
     margin: 0 40px;
+}
+
+.footer-social-wrapper .footer-social-menu ul{
+    flex-direction: column;
+}
+
+.footer-social-menu ul li{
+    margin-bottom: 10px;
+}
+
+.footer-social-menu ul li:last-child{
+    margin-bottom: 0;
+}
+
+.footer-social-wrapper .footer-social-menu ul li:nth-child(even){
+    text-align: right;
 }
 
 .footer-social-menu a{
@@ -497,7 +518,8 @@ footer{
 }
 
 .footer-bottom{
-     padding: 30px 25px 40px 25px;
+    padding: 30px 25px 100px 25px;
+    position: relative;
  }
 
 .footer-bottom-top{
@@ -588,7 +610,57 @@ footer{
     margin-top: 25px;
 }
 
-@media all and (min-width: 540px) {
+.top-page{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 35px;
+    right: 48%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.top-page:hover{
+    opacity: 0.8;
+}
+
+.top-page:focus{
+    outline: none;
+}
+
+.arr-top{
+    position: relative;
+}
+
+.arr-top:before,
+.arr-top:after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    border-radius: 4px;
+    transform: rotate(45deg);
+    background-color: #87d6da;
+}
+
+.arr-top:after{
+    transform: rotate(-45deg);
+    right: -7px;
+}
+
+@media all and (min-width: 600px) {
+    .footer-social-menu ul{
+        justify-content: space-between;
+        margin: 0 40px;
+        flex-direction: row;
+    }
+    .footer-social-menu ul li{
+        margin-bottom: 0;
+    }
+    .footer-social-menu ul li:nth-child(even){
+        text-align: left;
+    }
     .footer-bottom{
         padding: 60px 15px 40px 15px;
     }
@@ -605,4 +677,12 @@ footer{
         order: 0;
         margin-bottom: 0;
     }
+    .footer-bottom-bottom .footer-social-menu{
+        margin-top: 20px;
+    }
+    .top-page{
+        bottom: 30px;
+        right: 20px;
+    }
 }
+

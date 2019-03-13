@@ -243,78 +243,85 @@ nav a:hover{
   }
 }
 
-/*about-block*/
+/*topic-block*/
 
-.about{
-  margin: 20px auto;
+.topic{
+  margin: 20px auto 0;
   text-align: center;
 
   blockquote{
-    margin: 0 7%;
+    margin: 0 7% 20px;
   }
 }
 
-
-.about-block-wrapper{
+.topic-wrapper{
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.about-block{
+.topic-block{
+  position: relative;
   width: 90%;
-  margin: 20px auto;
+  margin: 0 auto 100px;
   height: 310px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.about-block-white{
-  background-color: @white;
-  width: 50%;
-  padding: 15px 0;
+.topic-block-white{
+  position: absolute;
+  width: 100%;
+  bottom: -63px;
 }
 
-.about-block-white a{
+.topic-block-white a{
   font-size: 24px;
   color: @blue;
   transition: color 0.3s ease;
 }
 
-.about-block-white a:hover{
+.topic-block-white a:hover{
   color: #278085;
 }
 
-.about-block1{
+.topic-block1{
   background: url("../img/about-block1.jpg") no-repeat;
   background-size: cover;
 }
 
-.about-block2{
+.topic-block2{
   background: url("../img/about-block2.jpg") no-repeat;
   background-size: cover;
 }
 
-.about-block3{
+.topic-block3{
   background: url("../img/about-block3.jpg") no-repeat;
   background-size: cover;
 }
 
 @media all and (min-width: 600px) {
-  .about{
+  .topic{
     margin: 50px auto;
   }
-  .about-block{
+  .topic-block{
     width: 32%;
     height: 260px;
+    margin: 0;
   }
-  .about-block-wrapper{
+  .topic-wrapper{
     justify-content: space-between;
     flex-direction: row;
   }
-  .about blockquote{
+  .topic blockquote{
     margin: 0 7% 35px 7%;
+  }
+  .topic-block-white{
+    background-color: @white;
+    position: static;
+    width: 50%;
+    padding: 15px 0;
   }
 }
 
@@ -391,7 +398,6 @@ nav a:hover{
   .quote-box li:nth-child(3){
     order: 0;
   }
-
   .quote-box li:nth-child(5){
     order: 0;
   }
@@ -443,7 +449,7 @@ nav a:hover{
 }
 
 .post-text p{
-  border-bottom: 2px solid #f2f2f2;
+  border-bottom: 1px solid #ccc;
   line-height: 1.4;
   padding-bottom: 20px;
   margin-bottom: 10px;
@@ -464,7 +470,7 @@ nav a:hover{
     border: none;
   }
   .post-text{
-    border: 2px solid #f2f2f2;
+    border: 1px solid #f2f2f2;
     border-top: none;
     padding: 40px 50px;
   }
@@ -487,29 +493,28 @@ footer{
 .footer-social-wrapper{
   background-color: @blue;
   padding: 20px 0;
+
+  .footer-social-menu ul{
+    flex-direction: column;
+
+    li:nth-child(even){
+      text-align: right;
+    }
+  }
 }
 
 .footer-social-menu ul{
   display: flex;
   margin: 0 40px;
+
+    li{
+      margin-bottom: 10px;
+
+      &li:last-child{
+        margin-bottom: 0;
+      }
+    }
 }
-
-.footer-social-wrapper .footer-social-menu ul{
-  flex-direction: column;
-
-  li:nth-child(even){
-    text-align: right;
-  }
-}
-
-.footer-social-menu ul li{
-  margin-bottom: 10px;
-
-  &li:last-child{
-    margin-bottom: 0;
-  }
-}
-
 
 .footer-social-menu a{
   font-size: 15px;
@@ -542,40 +547,44 @@ footer{
   background: url("../img/twitter-white.png") no-repeat 0 -4px;
 }
 
-.footer-bottom{
+.footer-content{
   padding: 30px 25px 100px 25px;
   position: relative;
 }
 
-.footer-bottom-top{
+.footer-content-wrapper{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.footer-bottom-left{
+.footer-about-me{
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  position: relative;
+  padding-top: 50px;
+
+  .change-position{
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+  }
 }
 
-.photo{
+.footer-photo{
   width: 30%;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
-.footer-bottom h2{
-  font-size: 24px;
-}
-
-.text-about p{
+.about-me-text p{
   font-size: 15px;
   margin: 14px 0;
   line-height: 1.4;
 }
 
-.text-about a{
+.about-me-text a{
   color: @blue;
   border-bottom: 1px solid @blue;
   font-size: 15px;
@@ -585,7 +594,7 @@ footer{
   }
 }
 
-.footer-bottom-right{
+.footer-subs{
   width: 100%;
   order: -1;
   margin-bottom: 30px;
@@ -617,7 +626,7 @@ footer{
   }
 }
 
-.footer-bottom-bottom .footer-social-menu{
+.footer-copyright .footer-social-menu{
   margin-top: 50px;
 
   ul{
@@ -630,7 +639,7 @@ footer{
   }
 }
 
-.footer-bottom-bottom .copyright{
+.footer-copyright p{
   font-size: 13px;
   margin-top: 25px;
 }
@@ -687,23 +696,27 @@ footer{
       }
     }
   }
-  .footer-bottom{
+  .footer-content{
     padding: 60px 15px 40px 15px;
+
+    .change-position{
+      position: static;
+    }
   }
-  .footer-bottom-left{
+  .footer-about-me{
     width: 57%;
     flex-direction: row;
   }
-  .photo{
+  .footer-photo{
     width: 70%;
     margin-right: 30px;
   }
-  .footer-bottom-right{
+  .footer-subs{
     width: 36%;
     order: 0;
     margin-bottom: 0;
   }
-  .footer-bottom-bottom .footer-social-menu{
+  .footer-copyright .footer-social-menu{
     margin-top: 20px;
   }
   .top-page{

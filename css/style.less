@@ -13,26 +13,26 @@ body{
       margin: 0;
       padding: 0;
     }
+
+    img{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ol, ul{
+      list-style: none;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    h1, h2, h3, h4, h5{
+      font-weight: normal;
+    }
 }
 
-
-img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-ol, ul{
-  list-style: none;
-}
-
-a{
-  text-decoration: none;
-}
-
-h1, h2, h3, h4, h5{
-  font-weight: normal;
-}
 
 .container{
   max-width: 980px;
@@ -138,7 +138,7 @@ nav a:hover{
     }
 
     a{
-      font-size: 16px;
+      font-size: 14px;
       padding: 0;
     }
 
@@ -405,6 +405,10 @@ nav a:hover{
 
 /*post*/
 
+.post-box{
+  margin-bottom: 20px;
+}
+
 .post{
   margin: 15px 5% 0 5%;
   border-bottom: 1px solid #f2f2f2;
@@ -465,6 +469,9 @@ nav a:hover{
 }
 
 @media all and (min-width: 600px) {
+  .post-box{
+    margin-bottom: 50px;
+  }
   .post{
     margin: 40px 0 0 0;
     border: none;
@@ -473,12 +480,12 @@ nav a:hover{
     border: 1px solid #f2f2f2;
     border-top: none;
     padding: 40px 50px;
-  }
-  .post-text h3{
-    font-size: 28px;
-    margin: 8px 0;
-  }
 
+    h3{
+      font-size: 28px;
+      margin: 8px 0;
+    }
+  }
 }
 
 /*footer*/
@@ -487,7 +494,6 @@ footer{
   width: 100%;
   background-color: @grey;
   color: @white;
-  margin-top: 50px;
 }
 
 .footer-social-wrapper{
@@ -723,6 +729,69 @@ footer{
   .top-page{
     bottom: 30px;
     right: 20px;
+  }
+}
+
+//page2 - about me
+
+.story{
+  padding: 40px 15px 20px 15px;
+  font-size: 15px;
+
+    h2{
+      font-size: 30px;
+      color: black;
+      margin-bottom: 35px;
+    }
+
+    .story-wrapper{
+      display: flex;
+      flex-direction: column-reverse;
+
+      .story-text, .story-photo{
+        width: 100%;
+      }
+
+      .story-photo{
+        margin: 0 auto 30px;
+      }
+
+      p{
+        margin-top: 20px;
+
+        &:first-child{
+          margin-top: 0;
+        }
+      }
+
+      a{
+        color: @blue;
+        text-decoration: underline;
+
+        &:hover{
+          text-decoration: none;
+        }
+      }
+
+    }
+}
+
+@media all and (min-width: 600px) {
+  .story {
+    padding: 110px 30px 50px 30px;
+
+    .story-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .story-text{
+        width: 47%;
+      }
+      .story-photo{
+        width: 41%;
+        margin: 0;
+      }
+    }
   }
 }
 

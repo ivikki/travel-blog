@@ -24,3 +24,12 @@ const scrollToTop = () => {
 document.getElementById("js-top-page").addEventListener("click", () => {
   scrollToTop();
 });
+
+let sub = document.getElementById("sub");
+let formSub = document.getElementById("form-sub");
+let formOk = document.getElementById("form-ok");
+
+sub.addEventListener("click", () => {
+  formSub.style.display = "none";
+  formOk.style.display = "block";
+});

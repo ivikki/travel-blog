@@ -7,6 +7,8 @@ body{
   padding: 0;
   font: 16px/1.2 Arial, sans-serif;
   color: @grey;
+  width: 100%;
+  overflow-x: hidden;
 
     *, *:before, *:after{
       box-sizing: border-box;
@@ -73,7 +75,7 @@ header{
   }
 
   a{
-    font-size: 18px;
+    font-size: 14px;
     padding: 15px 20px;
   }
 
@@ -138,7 +140,6 @@ nav a:hover{
     }
 
     a{
-      font-size: 14px;
       padding: 0;
     }
 
@@ -629,6 +630,7 @@ footer{
     color: @white;
     padding: 10px 0;
     font-weight: bold;
+    cursor: pointer;
   }
 }
 
@@ -817,3 +819,93 @@ footer{
   }
 }
 
+//article-page
+
+.article-page{
+  padding-top: 59px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: @grey;
+  line-height: 1.3;
+
+  .forum{
+    background: cornflowerblue;
+    height: 50px;
+    display: table;
+    width: 100%;
+
+    p{
+      color: @white;
+      text-align: center;
+      font-size: 12px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  .article {
+    margin: 40px 30px;
+    padding: 60px 90px;
+    border: 1px solid #f2f2f2;
+    color: @grey;
+
+    .article-date {
+      font-size: 13px;
+
+      a{
+        position: relative;
+        color: @grey;
+        padding-left: 50px;
+
+        &:hover {
+          color: @blue;
+        }
+
+        &:before{
+          content: '';
+          position: absolute;
+          background: url("../img/avatarka.jpg");
+          height: 32px;
+          width: 32px;
+          top: -10px;
+          left: 0;
+        }
+      }
+    }
+
+    .post-img{
+      margin: 30px 0;
+    }
+
+    h3 {
+      font-size: 27px;
+      margin: 30px 0;
+      color: black;
+    }
+
+    h4{
+      font-weight: bold;
+      color: black;
+    }
+
+    p{
+      margin-bottom: 30px;
+
+      a{
+        color: @blue;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+    blockquote{
+      font-size: 22px;
+      border-left: 2px solid @blue;
+      padding: 5px 0 5px 10px;
+      margin-bottom: 30px;
+      width: 80%;
+    }
+  }
+}

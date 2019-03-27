@@ -12,12 +12,15 @@ window.addEventListener("resize", function() {
   }
 });
 
-document
-  .getElementsByClassName("nav-menu-link")
-  .addEventListener("click", function() {
-    document.getElementsByClassName("nav-menu-link").classList.toggle("active");
-  });
+const scrollToTop = () => {
+  const scrollFromTopPos =
+    document.documentElement.scrollTop || document.body.scrollTop;
+  if (scrollFromTopPos > 0) {
+    scrollTo(0, scrollFromTopPos - scrollFromTopPos / 25);
+    requestAnimationFrame(scrollToTop);
+  }
+};
 
-document.getElementById("js-top-page").addEventListener("click", function() {
-  window.scrollTo(0, 0);
+document.getElementById("js-top-page").addEventListener("click", () => {
+  scrollToTop();
 });

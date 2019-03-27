@@ -35,7 +35,7 @@
             </div>
         </header>
         <main class="story container">
-            <h2>Обо мне</h2>
+            <h2 name="top">Обо мне</h2>
             <div class="story-wrapper">
                 <div class="story-text">
                     <p>Это текст. Нажмите один раз и выберите «Редактировать текст» или просто кликните дважды, чтобы добавить свой текст и настроить шрифт. Вы можете переместить его в любое место на странице. Расскажите посетителям сайта о себе.</p>
@@ -43,9 +43,10 @@
                     <p>Пишите:</p>
                     <a href="mailto:Info@mysite.ru">Info@mysite.ru</a>
                 </div>
-                <div class="story-photo">
-                   <img src="img/photo_women.jpg" alt="photo">
-                </div>
+                <picture class="story-photo">
+                        <source srcset="img/photo_big.jpg" media="(min-width: 600px)">
+                        <img src="img/photo_small.jpg" alt="photo_author">
+                 </picture>
             </div>
         </main>
         <footer>
@@ -72,7 +73,7 @@
                         <div class="about-me-text">
                             <h2 class="change-position">Обо мне</h2>
                             <p>Это текст. Нажмите один раз и выберите «Редактировать текст» или просто дважды кликните, чтобы добавить свой текст и настроить шрифт.</p>
-                            <a href="#">Читать дальше</a>
+                            <a href="#top">Читать дальше</a>
                         </div>
                     </div>
                     <div class="footer-subs">

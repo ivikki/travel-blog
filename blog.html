@@ -7,6 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>travel-blog</title>
         <link rel="stylesheet/less" type="text/css" href="css/style.less">
+        <link rel="stylesheet" type="text/css" href="js/slick/slick.css">
     </head>
     <body>
         <header id="header">
@@ -34,32 +35,40 @@
                 </button>
             </div>
         </header>
-        <main class="article-page container">
+        <main class="article-page-wrapper container">
             <div class="forum">
                 <p>This blog isn't set up yet. Check back soon.</p>
             </div>
-            <div class="article">
-                <div class="article-date">
-                    <a class="date-avatar" href="#">Admin</a>
-                    <span>17 окт. 2018 г. &bull; 1 мин. чтения</span>
+            <div class="article-page">
+                <div id="article" class="article">
+                    <div class="article-date">
+                        <a id="article-author" class="date-avatar" href="#"></a>
+                        <span id="article-date"></span>
+                    </div>
+                    <h3 id="article-title"></h3>
+                    <div id="article-body"></div>
                 </div>
-                <h3>Мистер и Миссис Смит на Миконосе</h3>
-                <h4>Создайте подзаголовок поста: одно-два предложения, которые кратко передают содержание поста и побуждают продолжить чтение.</h4>
-                <div class="post-img">
-                    <img src="img/post7.jpg" alt="post7">
+                <div class="recent-posts-block">
+                    <span>Недавние посты</span>
+                    <a href="#">Смотреть все</a>
+                    <div class="recent-posts-wrapper">
+                        <div class="recent-post">
+                            <img src="img/post9.jpg" alt="post9">
+                            <a href="/blog.html?id=9">Девушка из Ипанемы</a>
+                        </div>
+                        <div class="recent-post">
+                            <img src="img/post8.jpg" alt="post8">
+                            <a href="/blog.html?id=8">Мексиканский дневник, день 1: Оахака</a>
+                        </div>
+                        <div class="recent-post">
+                            <img src="img/post1.jpg" alt="post1">
+                            <a href="/blog.html?id=1">Белый песок, синее море</a>
+                        </div>
+                    </div>
                 </div>
-                <p>Это текст поста. Поделитесь с читателями и потенциальными клиентами интересной и полезной информацией по теме. Используйте посты как возможность
-                    постоянного общения с посетителями: делитесь новостями, советами и трендами.</p>
-                <blockquote>Вы уже придумали дизайн для блога? Попробуйте каждый из наших восьми макетов, чтобы скомпоновать содержание наилучшим образом.</blockquote>
-                <p>Вам предстоит опубликовать множество постов, поэтому используйте рубрики для упорядочивания материалов. Это поможет читателям легче ориентироваться в блоге.</p>
-                <h4>Создавайте актуальный контент</h4>
-                <p>Никто не разбирается в вашем бизнесе лучше вас, поэтому читатели должны воспринимать блог как авторитетный источник актуальной информации.
-                    Хотите улучшить позиции сайта в поисковых системах? Используйте ключевые слова, имеющие непосредственное отношение к вашему сайту или бизнесу.
-                    Блог хорошо работает на поисковую оптимизацию.
-                    Чтобы посетители быстрее нашли нужный контент, добавляйте к постам хештеги:
-                    <a href="#">#дизайн</a> <a href="#">#спорт</a> <a href="#">#онлайн</a>-маркетинг.</p>
-                <p>Блог помогает посетителям увидеть личность, стоящую за бизнесом, и наделяет сайт голосом. Добавляйте в постам качественные фотографии или видео: они привлекают больше внимания к содержанию.
-                    Готовы начать? Создайте новый пост.</p>
+                <div class="come-in">
+                    <p>Чтобы комментировать, <a href="#">войдите в аккаунт</a></p>
+                </div>
             </div>
         </main>
         <footer>
@@ -75,7 +84,11 @@
                 </div>
             </div>
             <div class="slider">
-
+                <div><img src="img/slaider-1.jpg" alt="slider-img1"></div>
+                <div><img src="img/slaider-2.jpeg" alt="slider-img2"></div>
+                <div><img src="img/slaider-3.jpg" alt="slider-img3"></div>
+                <div><img src="img/slaider-4.jpg" alt="slider-img4"></div>
+                <div><img src="img/slaider-5.jpeg" alt="slider-img5"></div>
             </div>
             <div class="footer-content container">
                 <div class="footer-content-wrapper">
@@ -90,9 +103,9 @@
                         </div>
                     </div>
                     <div class="footer-subs">
-                        <form id="form-sub" action="#">
+                        <form id="form-sub">
                             <h2>Подпишитесь на новые посты:</h2>
-                            <input id="js-email" type="email" placeholder="Ваш email">
+                            <input id="js-email" type="email" placeholder="Ваш email" required>
                             <button id="sub">Подписаться</button>
                         </form>
                         <div id="form-ok">
@@ -119,6 +132,9 @@
             </div>
         </footer>
         <script async src="js/less.min.js" type="text/javascript"></script>
-        <script async src="js/main.js"></script>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="js/slick/slick.min.js" type="text/javascript"></script>
+        <script src="js/main.js"></script>
+        <script src="js/blog.js"></script>
     </body>
 </html>

@@ -7,6 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>travel-blog</title>
         <link rel="stylesheet/less" type="text/css" href="css/style.less">
+        <link rel="stylesheet" type="text/css" href="js/slick/slick.css">
     </head>
     <body>
         <header id="header">
@@ -51,9 +52,9 @@
                             <span>17 окт. 2018 г. &bull; 1 мин. чтения</span>
                         </div>
                     </div>
-                    <h3><a href="#">Белый песок, синее море</a></h3>
-                    <p><a href="#">Создайте подзаголовок поста: одно-два предложения, которые кратко передают содержание поста и побуждают продолжить чтение. Это текст поста. Поделитесь с читателями и потенциальными клиентами...</a></p>
-                    <span>Просмотров: 0</span><span><a href="#">Комментировать</a></span>
+                    <h3><a href="/blog.html?id=1">Белый песок, синее море</a></h3>
+                    <p class="post-excerpt"><a href="/blog.html?id=1">Создайте подзаголовок поста: одно-два предложения, которые кратко передают содержание поста и побуждают продолжить чтение. Это текст поста. Поделитесь с читателями и потенциальными клиентами...</a></p>
+                    <p class="scan">Просмотров: 0 <a href="#">Комментировать</a></p>
                 </div>
             </div>
             <div class="post">
@@ -70,9 +71,9 @@
                             <span>17 окт. 2018 г. &bull; 1 мин. чтения</span>
                         </div>
                     </div>
-                    <h3><a href="#">Лучшие СПА-отели</a></h3>
-                    <p><a href="#">Создайте подзаголовок поста: одно-два предложения, которые кратко передают содержание поста и побуждают продолжить чтение. Это текст поста. Поделитесь с читателями и потенциальными клиентами...</a></p>
-                    <span>Просмотров: 0</span><span><a href="#">Комментировать</a></span>
+                    <h3><a href="/blog.html?id=2">Лучшие СПА-отели</a></h3>
+                    <p class="post-excerpt"><a href="/blog.html?id=2">Создайте подзаголовок поста: одно-два предложения, которые кратко передают содержание поста и побуждают продолжить чтение. Это текст поста. Поделитесь с читателями и потенциальными клиентами...</a></p>
+                    <p class="scan">Просмотров: 0 <a href="#">Комментировать</a></p>
                 </div>
             </div>
             <div class="post">
@@ -89,9 +90,9 @@
                             <span>17 окт. 2018 г. &bull; 1 мин. чтения</span>
                         </div>
                     </div>
-                    <h3><a href="#">5 лучших пляже Корфу, Греция</a></h3>
-                    <p><a href="#">Создайте подзаголовок поста: одно-два предложения, которые кратко передают содержание поста и побуждают продолжить чтение. Это текст поста. Поделитесь с читателями и потенциальными клиентами...</a></p>
-                    <span>Просмотров: 0</span><span><a href="#">Комментировать</a></span>
+                    <h3><a href="/blog.html?id=3">5 лучших пляже Корфу, Греция</a></h3>
+                    <p class="post-excerpt"><a href="/blog.html?id=3">Создайте подзаголовок поста: одно-два предложения, которые кратко передают содержание поста и побуждают продолжить чтение. Это текст поста. Поделитесь с читателями и потенциальными клиентами...</a></p>
+                    <p class="scan">Просмотров: 0 <a href="#">Комментировать</a></p>
                 </div>
             </div>
         </main>
@@ -108,7 +109,11 @@
                 </div>
             </div>
             <div class="slider">
-
+                <div><img src="img/slaider-1.jpg" alt="slider-img1"></div>
+                <div><img src="img/slaider-2.jpeg" alt="slider-img2"></div>
+                <div><img src="img/slaider-3.jpg" alt="slider-img3"></div>
+                <div><img src="img/slaider-4.jpg" alt="slider-img4"></div>
+                <div><img src="img/slaider-5.jpeg" alt="slider-img5"></div>
             </div>
             <div class="footer-content container">
                 <div class="footer-content-wrapper">
@@ -123,9 +128,9 @@
                         </div>
                     </div>
                     <div class="footer-subs">
-                        <form id="form-sub" action="#">
+                        <form id="form-sub">
                             <h2>Подпишитесь на новые посты:</h2>
-                            <input id="js-email" type="email" placeholder="Ваш email">
+                            <input id="js-email" type="email" placeholder="Ваш email" required>
                             <button id="sub">Подписаться</button>
                         </form>
                         <div id="form-ok">
@@ -152,6 +157,8 @@
             </div>
         </footer>
         <script async src="js/less.min.js" type="text/javascript"></script>
-        <script async src="js/main.js"></script>
+        <script defer src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script defer src="js/slick/slick.min.js" type="text/javascript"></script>
+        <script defer src="js/main.js"></script>
     </body>
 </html>

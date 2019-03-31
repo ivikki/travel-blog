@@ -31,25 +31,43 @@ document.getElementById("js-top-page").addEventListener("click", () => {
 
 //click subs form - change block
 
+let hasValidate = false;
 let sub = document.getElementById("sub");
 let formSub = document.getElementById("form-sub");
 let formOk = document.getElementById("form-ok");
 let formInp = document.getElementById("js-email");
-let errEmail = document.createElement("p");
-errEmail.classList.add("red-error");
-errEmail.innerText = "Пожалуйста, укажите действительный email";
 
-formInp.addEventListener("keyup", () => {
+function formValidation() {
+  if (!hasValidate) {
+    return;
+  }
+
+  let errEmail = document.getElementById("form-error");
+
   let isValid = formSub.checkValidity();
   if (isValid) {
-    formSub.removeChild(errEmail);
+    if (errEmail) {
+      errEmail.remove();
+    }
   } else {
-    formSub.appendChild(errEmail);
+    if (!errEmail) {
+      errEmail = document.createElement("p");
+      errEmail.id = "form-error";
+      errEmail.classList.add("red-error");
+      errEmail.innerText = "Пожалуйста, укажите действительный email";
+
+      formSub.appendChild(errEmail);
+    }
   }
-});
+}
+
+formInp.addEventListener("keyup", formValidation);
 
 sub.addEventListener("click", e => {
   e.preventDefault();
+
+  hasValidate = true;
+  formValidation();
 
   let isValid = formSub.checkValidity();
   if (isValid) {

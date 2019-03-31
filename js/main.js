@@ -1,5 +1,7 @@
 "use strict";
 
+//mobile version header menu
+
 let headerActiveClass = document.getElementById("header");
 
 document.getElementById("hamburger").addEventListener("click", function() {
@@ -27,14 +29,36 @@ document.getElementById("js-top-page").addEventListener("click", () => {
   scrollToTop();
 });
 
+//click subs form - change block
+
 let sub = document.getElementById("sub");
 let formSub = document.getElementById("form-sub");
 let formOk = document.getElementById("form-ok");
+let formInp = document.getElementById("js-input");
+let errEmail = document.createElement("p");
+errEmail.classList.add("red-error");
+errEmail.innerText = "Пожалуйста, укажите действительный email";
+
+formInp.addEventListener("keyup", () => {
+  let isValid = formSub.checkValidity();
+  if (isValid) {
+    formSub.removeChild(errEmail);
+  } else {
+    formSub.appendChild(errEmail);
+  }
+});
 
 sub.addEventListener("click", e => {
-  formSub.style.display = "none";
-  formOk.style.display = "block";
+  e.preventDefault();
+
+  let isValid = formSub.checkValidity();
+  if (isValid) {
+    formSub.style.display = "none";
+    formOk.style.display = "block";
+  }
 });
+
+//slider in footer
 
 $(".slider").slick({
   infinite: true,

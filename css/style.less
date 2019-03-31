@@ -63,6 +63,7 @@ header{
 
     a{
       color: @grey;
+      font-size: 14px;
       font-weight: 400;
       display: block;
       transition: color 0.3s ease;
@@ -93,7 +94,6 @@ header{
       }
 
       a{
-        font-size: 14px;
         padding: 15px 20px;
       }
 
@@ -101,9 +101,13 @@ header{
         color: @white;
         background: @blue;
       }
+    }
 
-      a:hover{
-        opacity: 0.5;
+    .social-menu{
+      a{
+        &:hover{
+          opacity: 0.5;
+        }
       }
     }
   }
@@ -140,6 +144,13 @@ header.header-mobile .container .nav-menu{
         .active{
           color: @blue;
           background: none;
+        }
+      }
+
+      .social-menu{
+
+        a{
+          padding: 0;
         }
       }
     }
@@ -727,7 +738,7 @@ footer{
 
         ul{
           margin: 0;
-          justify-content: flex-start;
+          justify-content: center;
           flex-direction: row;
         }
 
@@ -957,10 +968,11 @@ footer{
   }
 
   .article-page {
-    margin: 30px 20px;
+    margin: 30px 30px;
 
     .article {
       color: @grey;
+      padding: 30px 0;
 
       .article-date {
         font-size: 13px;
@@ -1084,7 +1096,7 @@ footer{
   }
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 800px) {
   .article-page-wrapper {
     margin-bottom: 40px;
     padding-top: 59px;

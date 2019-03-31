@@ -34,7 +34,7 @@ document.getElementById("js-top-page").addEventListener("click", () => {
 let sub = document.getElementById("sub");
 let formSub = document.getElementById("form-sub");
 let formOk = document.getElementById("form-ok");
-let formInp = document.getElementById("js-input");
+let formInp = document.getElementById("js-email");
 let errEmail = document.createElement("p");
 errEmail.classList.add("red-error");
 errEmail.innerText = "Пожалуйста, укажите действительный email";
